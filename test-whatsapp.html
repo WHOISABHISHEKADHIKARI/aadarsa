@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        button {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #128C7E;
+        }
+        .test-result {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>WhatsApp Integration Test</h1>
+    
+    <div class="test-result">
+        <h3>Test URLs:</h3>
+        <p id="url1"></p>
+        <p id="url2"></p>
+    </div>
+    
+    <button onclick="testWhatsApp1()">Test: Book Consultation</button>
+    <button onclick="testWhatsApp2()">Test: Learn More</button>
+    <button onclick="testWhatsApp3()">Test: Book Appointment</button>
+    <button onclick="testWhatsApp4()">Test: Free Consultation</button>
+    
+    <div class="test-result">
+        <h3>Instructions:</h3>
+        <p>1. Click any button above</p>
+        <p>2. It should open WhatsApp Web or WhatsApp app</p>
+        <p>3. The message should be pre-filled</p>
+        <p>4. If it doesn't work, check the console for errors</p>
+    </div>
+    
+    <script>
+        function testWhatsApp1() {
+            const message = `Hi! I'm interested in your Digital Marketing Strategy service. I'd like to book a consultation.`;
+            const whatsappUrl = `https://wa.me/9779809243137?text=${encodeURIComponent(message)}`;
+            console.log('WhatsApp URL 1:', whatsappUrl);
+            document.getElementById('url1').textContent = 'URL 1: ' + whatsappUrl;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        function testWhatsApp2() {
+            const message = `Hi! I'd like to learn more about your Content Creation service. Can you provide more details?`;
+            const whatsappUrl = `https://wa.me/9779809243137?text=${encodeURIComponent(message)}`;
+            console.log('WhatsApp URL 2:', whatsappUrl);
+            document.getElementById('url2').textContent = 'URL 2: ' + whatsappUrl;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        function testWhatsApp3() {
+            const message = `Hi! I'd like to book an appointment for a consultation about your digital marketing services.`;
+            const whatsappUrl = `https://wa.me/9779809243137?text=${encodeURIComponent(message)}`;
+            console.log('WhatsApp URL 3:', whatsappUrl);
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        function testWhatsApp4() {
+            const message = `Hi! I'm interested in a free consultation about your digital marketing services. Can we schedule a call?`;
+            const whatsappUrl = `https://wa.me/9779809243137?text=${encodeURIComponent(message)}`;
+            console.log('WhatsApp URL 4:', whatsappUrl);
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Test URL generation on page load
+        window.onload = function() {
+            testWhatsApp1();
+            testWhatsApp2();
+        }
+    </script>
+</body>
+</html>
