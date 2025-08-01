@@ -198,7 +198,7 @@ const Videos = () => {
               onClick={(e) => {
                 e.stopPropagation();
                 const message = `Hi! I'm interested in your ${video.title} service. I'd like to book a consultation.`;
-                const whatsappUrl = `https://wa.me/9779809243137?text=${encodeURIComponent(message)}`;
+                const whatsappUrl = `https://wa.me/9779763219914?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
               }}
               className="w-full bg-gradient-to-r from-primary to-primary/90 text-white py-4 px-6 rounded-xl font-semibold hover:from-primary/90 hover:to-primary transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-3 shadow-lg hover:shadow-xl"
@@ -212,7 +212,7 @@ const Videos = () => {
               onClick={(e) => {
                 e.stopPropagation();
                 const message = `Hi! I'd like to learn more about your ${video.title} service. Can you provide more details?`;
-                const whatsappUrl = `https://wa.me/9779809243137?text=${encodeURIComponent(message)}`;
+                const whatsappUrl = `https://wa.me/9779763219914?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
               }}
               className="w-full border-2 border-gray-200 text-gray-700 py-3 px-6 rounded-xl font-medium hover:border-primary hover:text-primary transition-all duration-300 flex items-center justify-center gap-2"
@@ -299,7 +299,7 @@ const Videos = () => {
               <button 
                 onClick={() => {
                   const message = `Hi! I'd like to book an appointment for a consultation about your digital marketing services.`;
-                  const whatsappUrl = `https://wa.me/9779809243137?text=${encodeURIComponent(message)}`;
+                  const whatsappUrl = `https://wa.me/9779763219914?text=${encodeURIComponent(message)}`;
                   window.open(whatsappUrl, '_blank');
                 }}
                 className="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
@@ -309,7 +309,7 @@ const Videos = () => {
               <button 
                 onClick={() => {
                   const message = `Hi! I'm interested in a free consultation about your digital marketing services. Can we schedule a call?`;
-                  const whatsappUrl = `https://wa.me/9779809243137?text=${encodeURIComponent(message)}`;
+                  const whatsappUrl = `https://wa.me/9779763219914?text=${encodeURIComponent(message)}`;
                   window.open(whatsappUrl, '_blank');
                 }}
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition-all duration-300"

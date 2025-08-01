@@ -1,18 +1,23 @@
-import Hero from './components/Hero'
-import About from './components/About'
-import Videos from './components/Videos'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Hero />
-      <About />
-      <Videos />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <Layout>
+            <Home />
+          </Layout>
+        } />
+
+
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   )
 }
 
