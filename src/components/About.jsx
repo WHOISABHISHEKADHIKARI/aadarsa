@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import aboutImage from '../assets/Adobe Express - file.png';
 
 const About = () => {
   return (
@@ -32,7 +33,7 @@ const About = () => {
               {/* Actual image */}
               <div className="aspect-[4/5] overflow-hidden">
                 <img 
-                  src="/src/assets/Adobe Express - file.png" 
+                  src={aboutImage} 
                   alt="Adarsa Bro" 
                   className="w-full h-full object-cover"
                 />
