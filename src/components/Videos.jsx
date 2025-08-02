@@ -17,7 +17,7 @@ const Videos = () => {
       thumbnail: "brand-collab",
       description: "Professional brand collaboration showcase featuring authentic partnerships and creative content",
       url: "#contact",
-      videoUrl: "/brand-collab.mov",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
       type: "video"
     },
     {
@@ -29,7 +29,7 @@ const Videos = () => {
       thumbnail: "campaign",
       description: "Strategic marketing campaign execution with measurable results and brand growth",
       url: "#contact",
-      videoUrl: "/campaign.mp4",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       type: "video"
     },
     {
@@ -41,7 +41,7 @@ const Videos = () => {
       thumbnail: "information",
       description: "Engaging informational content that educates and entertains your audience",
       url: "#contact",
-      videoUrl: "/information-video.mp4",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       type: "video"
     },
     {
@@ -53,7 +53,7 @@ const Videos = () => {
       thumbnail: "promo",
       description: "High-impact promotional videos that drive engagement and conversions",
       url: "#contact",
-      videoUrl: "/promo-video.mp4",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
       type: "video"
     }
   ];
@@ -78,7 +78,11 @@ const Videos = () => {
       if (videoRef.current) {
         if (isPlaying) {
           videoRef.current.muted = false;
-          videoRef.current.play();
+          videoRef.current.play().catch(() => {
+            // If autoplay fails, keep muted
+            videoRef.current.muted = true;
+            videoRef.current.play();
+          });
         } else {
           videoRef.current.pause();
           videoRef.current.muted = true;
@@ -115,25 +119,37 @@ const Videos = () => {
             className="w-full h-full object-cover"
             controls={isPlaying}
             loop
+            muted={!isPlaying}
+            playsInline
             onClick={handleVideoClick}
             onError={() => setVideoError(true)}
             onLoadedData={() => setVideoLoaded(true)}
             poster={`data:image/svg+xml;base64,${btoa(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225"><rect width="400" height="225" fill="#f3f4f6"/><text x="200" y="112" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="16">${video.title}</text></svg>`)}`}
           >
             <source src={video.videoUrl} type="video/mp4" />
-            <source src={video.videoUrl} type="video/mov" />
             Your browser does not support the video tag.
           </video>
           
           {/* Error overlay */}
           {videoError && (
-            <div className="absolute inset-0 bg-red-500/20 flex items-center justify-center">
-              <div className="bg-white/95 rounded-lg p-4 text-center max-w-xs">
-                <svg className="w-8 h-8 text-red-500 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            <div className="absolute inset-0 bg-gray-900/80 flex items-center justify-center">
+              <div className="bg-white/95 rounded-lg p-6 text-center max-w-sm mx-4">
+                <svg className="w-12 h-12 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
-                <p className="text-sm text-gray-700 font-medium">Video temporarily unavailable</p>
-                <p className="text-xs text-gray-500 mt-1">Large file - please try refreshing</p>
+                <p className="text-sm text-gray-700 font-medium mb-2">Video Preview Coming Soon</p>
+                <p className="text-xs text-gray-500">Contact me to see my latest work samples</p>
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    const message = `Hi! I'd like to see samples of your ${video.title} work.`;
+                    const whatsappUrl = `https://wa.me/9779763219914?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+                  }}
+                  className="mt-3 px-4 py-2 bg-primary text-white text-xs rounded-full hover:bg-primary/90 transition-colors"
+                >
+                  Request Samples
+                </button>
               </div>
             </div>
           )}
