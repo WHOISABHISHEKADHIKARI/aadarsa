@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HomeIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
+import SEO from './SEO';
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <>
+      <SEO 
+        title="404 - Page Not Found | Adarsha Bro"
+        description="Sorry, the page you're looking for doesn't exist. Return to Adarsha Bro's homepage to explore digital marketing services and content creation."
+        keywords="404 Error, Page Not Found, Adarsha Bro, Digital Marketing, Content Creation"
+        url="https://aadarsa.netlify.app/404"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -102,6 +110,7 @@ const NotFound = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

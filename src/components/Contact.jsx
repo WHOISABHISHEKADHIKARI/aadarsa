@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import SEO from './SEO';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -155,7 +156,14 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <>
+      <SEO 
+        title="Contact Adarsha Bro - Get in Touch for Digital Marketing Services"
+        description="Contact Aadrasa Upreti (Adarsha Bro) for digital marketing consultation, content creation services, and brand collaboration opportunities."
+        keywords="Contact Adarsha Bro, Digital Marketing Consultation, Content Creation Services, Brand Collaboration, Aadrasa Upreti Contact"
+        url="https://aadarsa.netlify.app/contact"
+      />
+      <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -398,6 +406,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

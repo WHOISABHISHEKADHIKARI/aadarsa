@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import SEO from './SEO';
 
 const BrandsSection = () => {
   const [imageErrors, setImageErrors] = useState({});
@@ -42,7 +43,14 @@ const BrandsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <>
+      <SEO 
+        title="Brand Collaborations - Adarsha Bro's Partner Brands & Success Stories"
+        description="Discover the brands that trust Adarsha Bro for content creation and digital marketing. See successful collaborations and partnership opportunities."
+        keywords="Adarsha Bro Brand Partnerships, Brand Collaborations, Digital Marketing Partners, Content Creation Clients, Brand Success Stories"
+        url="https://aadarsa.netlify.app/brands"
+      />
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -166,6 +174,7 @@ const BrandsSection = () => {
         </motion.div>
       </div>
     </section>
+    </>
   );
 };
 

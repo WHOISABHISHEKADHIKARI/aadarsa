@@ -1,9 +1,17 @@
 import { motion } from 'framer-motion';
+import SEO from './SEO';
 import aboutImage from '../assets/IMG_9188.PNG';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <>
+      <SEO 
+        title="About Adarsha Bro - Digital Marketing Expert & Food Content Creator"
+        description="Learn about Aadrasa Upreti (Adarsha Bro), a passionate content creator specializing in food content and digital marketing. Discover his journey from kitchen to digital success."
+        keywords="About Adarsha Bro, Aadrasa Upreti, Food Content Creator, Digital Marketing Expert, Content Creation, Brand Strategy"
+        url="https://aadarsa.netlify.app/about"
+      />
+      <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -133,6 +141,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

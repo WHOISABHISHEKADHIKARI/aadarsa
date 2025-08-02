@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
+import SEO from './SEO';
 
 // Videos will be served directly from public folder
 
@@ -247,7 +248,14 @@ const Videos = () => {
   };
 
   return (
-    <section id="videos" className="py-20 bg-gray-50">
+    <>
+      <SEO 
+        title="Videos - Adarsha Bro's Digital Marketing & Content Creation Portfolio"
+        description="Watch Adarsha Bro's creative video content showcasing digital marketing campaigns, brand collaborations, and content creation expertise."
+        keywords="Adarsha Bro Videos, Digital Marketing Videos, Content Creation Portfolio, Brand Collaboration Videos, Marketing Campaigns"
+        url="https://aadarsa.netlify.app/videos"
+      />
+      <section id="videos" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -351,6 +359,7 @@ const Videos = () => {
         </motion.div>
       </div>
     </section>
+    </>
   );
 };
 
