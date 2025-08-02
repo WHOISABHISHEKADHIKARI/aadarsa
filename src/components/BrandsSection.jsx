@@ -35,6 +35,12 @@ const BrandsSection = () => {
       name: "Red Panda",
       logo: "/logo/Red panda.jpg",
       description: "Asian fusion restaurant and bar"
+    },
+    {
+      id: 6,
+      name: "SFM Fresh Masala",
+      logo: "/logo/SFM Fresh Masala.png",
+      description: "Premium spices and masala products"
     }
   ];
 
