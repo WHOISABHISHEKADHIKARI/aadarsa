@@ -18,7 +18,7 @@ const Videos = () => {
       thumbnail: "brand-collab",
       description: "Professional brand collaboration showcase featuring authentic partnerships and creative content",
       url: "#contact",
-      videoUrl: "/brand-collab.mov",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
       type: "video"
     },
     {
@@ -30,7 +30,7 @@ const Videos = () => {
       thumbnail: "campaign",
       description: "Strategic marketing campaign execution with measurable results and brand growth",
       url: "#contact",
-      videoUrl: "/campaign.mp4",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       type: "video"
     },
     {
@@ -42,7 +42,7 @@ const Videos = () => {
       thumbnail: "information",
       description: "Engaging informational content that educates and entertains your audience",
       url: "#contact",
-      videoUrl: "/information-video.mp4",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       type: "video"
     },
     {
@@ -54,7 +54,7 @@ const Videos = () => {
       thumbnail: "promo",
       description: "High-impact promotional videos that drive engagement and conversions",
       url: "#contact",
-      videoUrl: "/promo-video.mp4",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
       type: "video"
     }
   ];
@@ -78,18 +78,24 @@ const Videos = () => {
     useEffect(() => {
       if (videoRef.current) {
         if (isPlaying) {
+          // Try to play with sound first
           videoRef.current.muted = false;
           videoRef.current.play().catch(() => {
-            // If autoplay fails, keep muted
+            // If autoplay fails, try muted
             videoRef.current.muted = true;
-            videoRef.current.play();
+            videoRef.current.play().catch(() => {
+              // If still fails, show error
+              console.log('Video play failed for:', video.title);
+              setVideoError(true);
+            });
           });
         } else {
           videoRef.current.pause();
+          videoRef.current.currentTime = 0;
           videoRef.current.muted = true;
         }
       }
-    }, [isPlaying]);
+    }, [isPlaying, video.title]);
     
     const handleVideoClick = (e) => {
       e.stopPropagation();
@@ -122,12 +128,16 @@ const Videos = () => {
             loop
             muted={!isPlaying}
             playsInline
+            preload="metadata"
+            crossOrigin="anonymous"
             onClick={handleVideoClick}
             onError={() => setVideoError(true)}
             onLoadedData={() => setVideoLoaded(true)}
+            onCanPlay={() => setVideoLoaded(true)}
             poster={`data:image/svg+xml;base64,${btoa(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225"><rect width="400" height="225" fill="#f3f4f6"/><text x="200" y="112" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="16">${video.title}</text></svg>`)}`}
           >
             <source src={video.videoUrl} type="video/mp4" />
+            <source src={video.videoUrl} type="video/webm" />
             Your browser does not support the video tag.
           </video>
           
