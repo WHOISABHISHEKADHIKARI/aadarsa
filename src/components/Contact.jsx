@@ -66,13 +66,26 @@ const Contact = () => {
     
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Submit to Formspree
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      const response = await fetch('https://formspree.io/f/movlnjzy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
+      // You could add error state handling here
+      alert('There was an error sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -161,7 +174,7 @@ const Contact = () => {
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Info */}
           <motion.div
             className="space-y-8"
@@ -172,18 +185,18 @@ const Contact = () => {
           >
             <div>
               <h3 className="text-2xl font-bold text-dark mb-6">Get in Touch</h3>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 Whether you're looking to collaborate on content creation, need digital marketing 
                 consultation, or just want to say hello, I'm always excited to connect with 
                 fellow creators and entrepreneurs.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={info.title}
-                  className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                  className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -208,14 +221,14 @@ const Contact = () => {
 
             {/* Social Media Links */}
             <motion.div
-              className="mt-12"
+              className="mt-8 sm:mt-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-xl font-bold text-dark mb-6">Follow Me</h4>
-              <div className="flex space-x-4">
+              <h4 className="text-xl font-bold text-dark mb-4 sm:mb-6">Follow Me</h4>
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 {/* LinkedIn */}
                 <a
                   href="https://www.linkedin.com/in/adarsha-bro-431485361/"
@@ -274,8 +287,8 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} method="POST" action="https://formspree.io/f/movlnjzy" className="space-y-4 sm:space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-dark mb-2">
                     Name *
@@ -286,7 +299,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-300 ${
+                    className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-300 ${
                       errors.name ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Your Name"
@@ -304,7 +317,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-300 ${
+                    className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-300 ${
                       errors.email ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="your@email.com"
@@ -323,7 +336,7 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-300 ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-300 ${
                     errors.subject ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="What's this about?"
@@ -340,8 +353,8 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={6}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-300 resize-none ${
+                  rows={5}
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-300 resize-none ${
                     errors.message ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Tell me about your project or idea..."
@@ -352,7 +365,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full btn-primary text-lg py-4 ${
+                className={`w-full btn-primary text-base sm:text-lg py-3 sm:py-4 ${
                   isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
                 }`}
               >

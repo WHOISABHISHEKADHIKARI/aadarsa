@@ -14,13 +14,13 @@ const About = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-dark mb-4">
-            About <span className="text-primary">Adarsa Bro</span>
+            About <span className="text-primary">Adarsha Bro</span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Image Section */}
           <motion.div
             className="relative"
@@ -29,13 +29,25 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl max-w-md mx-auto lg:max-w-none">
               {/* Actual image */}
               <div className="aspect-[4/5] overflow-hidden">
                 <img 
                   src={aboutImage} 
-                  alt="Adarsa Bro" 
+                  alt="Adarsha Bro - Digital Marketing Expert and Content Creator" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="high"
+                  onLoad={(e) => {
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'scale(1)';
+                  }}
+                  style={{
+                    opacity: '0',
+                    transform: 'scale(1.1)',
+                    transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out'
+                  }}
                 />
               </div>
               
@@ -59,7 +71,7 @@ const About = () => {
             
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p className="text-lg">
-                Welcome to my world! I'm Aadrasa Upreti, better known as <strong className="text-primary">Adarsa Bro</strong> 
+                Welcome to my world! I'm Aadrasa Upreti, better known as <strong className="text-primary">Adarsha Bro</strong> 
                 in the digital space. My journey began with a simple love for food and a curiosity about 
                 how flavors could tell stories.
               </p>
@@ -79,23 +91,23 @@ const About = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6 pt-8">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-6 sm:pt-8">
               <motion.div
-                className="text-center p-4 bg-gray-50 rounded-lg"
+                className="text-center p-3 sm:p-4 bg-gray-50 rounded-lg"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="text-3xl font-bold text-primary mb-2">500K+</div>
-                <div className="text-gray-600">Total Views</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary mb-1 sm:mb-2">500K+</div>
+                <div className="text-sm sm:text-base text-gray-600">Total Views</div>
               </motion.div>
               
               <motion.div
-                className="text-center p-4 bg-gray-50 rounded-lg"
+                className="text-center p-3 sm:p-4 bg-gray-50 rounded-lg"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                <div className="text-gray-600">Happy Clients</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary mb-1 sm:mb-2">50+</div>
+                <div className="text-sm sm:text-base text-gray-600">Happy Clients</div>
               </motion.div>
             </div>
 

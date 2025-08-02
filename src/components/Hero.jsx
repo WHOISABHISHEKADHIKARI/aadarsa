@@ -43,7 +43,7 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen py-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center min-h-screen py-16 sm:py-20">
           
           {/* Left Column - Text Content */}
           <motion.div
@@ -65,30 +65,30 @@ const Hero = () => {
 
             {/* Main Heading */}
             <motion.h1
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="block text-gray-300 text-3xl sm:text-4xl lg:text-5xl font-normal mb-2">Hey, I'm</span>
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">Adarsa Bro</span>
+              <span className="block text-gray-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal mb-1 sm:mb-2">Hey, I'm</span>
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">Adarsha Bro</span>
             </motion.h1>
             
             {/* Subtitle */}
             <motion.p
-              className="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed"
+              className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <span className="text-white font-semibold">Content Creator</span> & <span className="text-white font-semibold">Digital Marketing Expert</span>
-              <br />
-              <span className="text-lg text-gray-400">Specializing in Food Content & Brand Growth</span>
+              <br className="hidden sm:block" />
+              <span className="block sm:inline text-base sm:text-lg text-gray-400 mt-1 sm:mt-0">Specializing in Food Content & Brand Growth</span>
             </motion.p>
 
             {/* Description */}
             <motion.p
-              className="text-lg text-gray-400 mb-10 max-w-lg leading-relaxed"
+              className="text-base sm:text-lg text-gray-400 mb-8 sm:mb-10 max-w-lg leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -98,7 +98,7 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 mb-12"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -126,24 +126,24 @@ const Hero = () => {
 
             {/* Social Proof */}
             <motion.div
-              className="flex items-center gap-8 text-gray-400"
+              className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-8 text-gray-400"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">500K+</div>
-                <div className="text-sm">Total Views</div>
+                <div className="text-xl sm:text-2xl font-bold text-white">500K+</div>
+                <div className="text-xs sm:text-sm">Total Views</div>
               </div>
-              <div className="w-px h-12 bg-gray-600"></div>
+              <div className="w-px h-8 sm:h-12 bg-gray-600 hidden sm:block"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">50+</div>
-                <div className="text-sm">Happy Clients</div>
+                <div className="text-xl sm:text-2xl font-bold text-white">50+</div>
+                <div className="text-xs sm:text-sm">Happy Clients</div>
               </div>
-              <div className="w-px h-12 bg-gray-600"></div>
+              <div className="w-px h-8 sm:h-12 bg-gray-600 hidden sm:block"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">3+</div>
-                <div className="text-sm">Years Experience</div>
+                <div className="text-xl sm:text-2xl font-bold text-white">3+</div>
+                <div className="text-xs sm:text-sm">Years Experience</div>
               </div>
             </motion.div>
           </motion.div>
@@ -157,11 +157,11 @@ const Hero = () => {
           >
             <div className="relative">
               {/* Main profile image */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-2xl"></div>
                 <img 
                   src={profilePhoto} 
-                  alt="Adarsa Bro" 
+                  alt="Adarsha Bro" 
                   className="relative w-full h-full object-cover rounded-full border-4 border-white/10 shadow-2xl"
                 />
                 
@@ -192,13 +192,23 @@ const Hero = () => {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
+          onClick={() => {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+            }
+          }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
           <div className="flex flex-col items-center gap-2">
-            <span className="text-gray-400 text-sm">Scroll to explore</span>
+             <span className="text-gray-400 text-sm">Scroll to explore below</span>
             <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
               <motion.div
                 className="w-1 h-3 bg-primary rounded-full mt-2"

@@ -22,3 +22,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Video files
+*.mov
+*.mp4
+*.avi
+*.mkv
+
+# Large image files
+src/assets/Adobe Express - file.png
+
+# Specific video files
+public/brand-collab.mov
+public/campaign.mp4
+public/information-video.mp4
+public/promo-video.mp4

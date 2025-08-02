@@ -70,38 +70,38 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-white">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand Section */}
           <motion.div
-            className="lg:col-span-2"
+            className="sm:col-span-2 lg:col-span-2"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="mb-6">
-              <h3 className="text-3xl font-bold mb-2">
+            <div className="mb-4 sm:mb-6">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2">
                 <span className="text-primary">Adarsa</span> Bro
               </h3>
-              <p className="text-gray-400 text-lg mb-4">
+              <p className="text-gray-400 text-base sm:text-lg mb-3 sm:mb-4">
                 Content Creator & Digital Marketing Expert
               </p>
-              <p className="text-gray-300 leading-relaxed max-w-md">
+              <p className="text-gray-300 leading-relaxed max-w-md text-sm sm:text-base">
                 Bringing flavors to life and helping brands grow through creative 
                 storytelling and strategic digital presence. Let's create something amazing together!
               </p>
             </div>
             
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 sm:space-x-4">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.name}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-800 hover:bg-primary text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 hover:bg-primary text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -122,13 +122,13 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-xl font-semibold mb-6 text-white">Navigation</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-white">Navigation</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {navigationLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group"
+                    className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group text-sm sm:text-base"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-primary transition-all duration-300 mr-0 group-hover:mr-2"></span>
                     {link.name}
@@ -145,13 +145,13 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-xl font-semibold mb-6 text-white">Services</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-white">Services</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group"
+                    className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group text-sm sm:text-base"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-primary transition-all duration-300 mr-0 group-hover:mr-2"></span>
                     {link.name}
@@ -171,17 +171,17 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <div className="max-w-md">
-            <h4 className="text-xl font-semibold mb-4 text-white">Stay Updated</h4>
-            <p className="text-gray-400 mb-4">
+            <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">Stay Updated</h4>
+            <p className="text-gray-400 mb-3 sm:mb-4 text-sm sm:text-base">
               Get the latest updates on new content and digital marketing tips.
             </p>
             <div className="flex">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white placeholder-gray-400"
+                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white placeholder-gray-400 text-sm sm:text-base"
               />
-              <button className="bg-primary hover:bg-primary/90 px-6 py-3 rounded-r-lg font-semibold transition-colors duration-300">
+              <button className="bg-primary hover:bg-primary/90 px-4 sm:px-6 py-2 sm:py-3 rounded-r-lg font-semibold transition-colors duration-300 text-sm sm:text-base">
                 Subscribe
               </button>
             </div>
@@ -191,36 +191,36 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <motion.p
-              className="text-gray-400 text-sm mb-4 md:mb-0"
+              className="text-gray-400 text-xs sm:text-sm mb-3 md:mb-0 text-center md:text-left"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              © {new Date().getFullYear()} Adarsa Bro. All rights reserved. Made with ❤️ for the community.
+              © {new Date().getFullYear()} Adarsha Bro. All rights reserved. Made with ❤️ for the community.
             </motion.p>
             
             <motion.div
-              className="flex items-center space-x-6"
+              className="flex items-center space-x-4 sm:space-x-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-primary text-xs sm:text-sm transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-primary text-xs sm:text-sm transition-colors duration-300">
                 Terms of Service
               </a>
               <button
                 onClick={scrollToTop}
-                className="w-10 h-10 bg-gray-800 hover:bg-primary text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-800 hover:bg-primary text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
                 </svg>
               </button>
