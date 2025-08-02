@@ -126,24 +126,24 @@ const Hero = () => {
 
             {/* Social Proof */}
             <motion.div
-              className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-6 lg:gap-8 text-gray-400"
+              className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6 lg:gap-8 text-gray-400 mt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              <div className="text-center min-w-0">
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">500K+</div>
-                <div className="text-xs sm:text-sm whitespace-nowrap">Total Views</div>
+              <div className="text-center flex-shrink-0 px-2">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight">500K+</div>
+                <div className="text-xs sm:text-sm whitespace-nowrap mt-1">Total Views</div>
               </div>
-              <div className="w-px h-6 sm:h-8 lg:h-12 bg-gray-600 hidden sm:block"></div>
-              <div className="text-center min-w-0">
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">50+</div>
-                <div className="text-xs sm:text-sm whitespace-nowrap">Happy Clients</div>
+              <div className="w-px h-8 sm:h-10 lg:h-12 bg-gray-600 hidden sm:block"></div>
+              <div className="text-center flex-shrink-0 px-2">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight">50+</div>
+                <div className="text-xs sm:text-sm whitespace-nowrap mt-1">Happy Clients</div>
               </div>
-              <div className="w-px h-6 sm:h-8 lg:h-12 bg-gray-600 hidden sm:block"></div>
-              <div className="text-center min-w-0">
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">3+</div>
-                <div className="text-xs sm:text-sm whitespace-nowrap">Years Experience</div>
+              <div className="w-px h-8 sm:h-10 lg:h-12 bg-gray-600 hidden sm:block"></div>
+              <div className="text-center flex-shrink-0 px-2">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight">3+</div>
+                <div className="text-xs sm:text-sm whitespace-nowrap mt-1">Years Experience</div>
               </div>
             </motion.div>
           </motion.div>
