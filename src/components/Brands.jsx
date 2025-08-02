@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import SEO from './SEO';
 
 const Brands = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -178,7 +179,14 @@ const Brands = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-20">
+    <>
+      <SEO 
+        title="Brand Collaborations - Adarsha Bro's Partner Brands & Success Stories"
+        description="Discover the brands that trust Adarsha Bro for content creation and digital marketing. See successful collaborations and partnership opportunities."
+        keywords="Adarsha Bro Brand Partnerships, Brand Collaborations, Digital Marketing Partners, Content Creation Clients, Brand Success Stories"
+        url="https://www.adarshabro.com/brands"
+      />
+      <div className="min-h-screen bg-gray-50 pt-20">
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -279,6 +287,7 @@ const Brands = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

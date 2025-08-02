@@ -9,7 +9,7 @@ const About = () => {
         title="About Adarsha Bro - Digital Marketing Expert & Food Content Creator"
         description="Learn about Aadrasa Upreti (Adarsha Bro), a passionate content creator specializing in food content and digital marketing. Discover his journey from kitchen to digital success."
         keywords="About Adarsha Bro, Aadrasa Upreti, Food Content Creator, Digital Marketing Expert, Content Creation, Brand Strategy"
-        url="https://aadarsa.netlify.app/about"
+        url="https://www.adarshabro.com/about"
       />
       <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

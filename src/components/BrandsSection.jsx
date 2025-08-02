@@ -54,7 +54,7 @@ const BrandsSection = () => {
         title="Brand Collaborations - Adarsha Bro's Partner Brands & Success Stories"
         description="Discover the brands that trust Adarsha Bro for content creation and digital marketing. See successful collaborations and partnership opportunities."
         keywords="Adarsha Bro Brand Partnerships, Brand Collaborations, Digital Marketing Partners, Content Creation Clients, Brand Success Stories"
-        url="https://aadarsa.netlify.app/brands"
+        url="https://www.adarshabro.com/brands"
       />
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -9,6 +9,7 @@ const Navigation = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Brands', href: '/brands' },
+    { name: 'Services', href: '/services' },
   ];
 
   const isActive = (path) => {
