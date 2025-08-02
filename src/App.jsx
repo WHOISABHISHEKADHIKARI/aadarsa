@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
+import Brands from './components/Brands';
 import NotFound from './components/NotFound';
 
 function App() {
@@ -13,8 +14,11 @@ function App() {
             <Home />
           </Layout>
         } />
-
-
+        <Route path="/brands" element={
+          <Layout>
+            <Brands />
+          </Layout>
+        } />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

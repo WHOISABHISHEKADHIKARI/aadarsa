@@ -8,6 +8,7 @@ const Navigation = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
+    { name: 'Brands', href: '/brands' },
   ];
 
   const isActive = (path) => {
