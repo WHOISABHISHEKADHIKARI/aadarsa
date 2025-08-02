@@ -17,7 +17,7 @@ const Videos = () => {
       thumbnail: "brand-collab",
       description: "Professional brand collaboration showcase featuring authentic partnerships and creative content",
       url: "#contact",
-      videoUrl: "/brand-collab.mov",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
       type: "video"
     },
     {
@@ -29,7 +29,7 @@ const Videos = () => {
       thumbnail: "campaign",
       description: "Strategic marketing campaign execution with measurable results and brand growth",
       url: "#contact",
-      videoUrl: "/campaign.mp4",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       type: "video"
     },
     {
@@ -41,7 +41,7 @@ const Videos = () => {
       thumbnail: "information",
       description: "Engaging informational content that educates and entertains your audience",
       url: "#contact",
-      videoUrl: "/information-video.mp4",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       type: "video"
     },
     {
@@ -53,7 +53,7 @@ const Videos = () => {
       thumbnail: "promo",
       description: "High-impact promotional videos that drive engagement and conversions",
       url: "#contact",
-      videoUrl: "/promo-video.mp4",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
       type: "video"
     }
   ];
