@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import aboutImage from '../assets/Adobe Express - file.png';
+import aboutImage from '../assets/IMG_9188.PNG';
 
 const About = () => {
   return (
