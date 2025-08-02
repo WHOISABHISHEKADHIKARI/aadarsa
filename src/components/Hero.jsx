@@ -65,13 +65,13 @@ const Hero = () => {
 
             {/* Main Heading */}
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="block text-gray-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal mb-1 sm:mb-2">Hey, I'm</span>
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">Adarsha Bro</span>
+              <span className="block text-gray-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal mb-1 sm:mb-2">Hey, I'm</span>
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x break-words">Adarsha Bro</span>
             </motion.h1>
             
             {/* Subtitle */}
@@ -126,24 +126,24 @@ const Hero = () => {
 
             {/* Social Proof */}
             <motion.div
-              className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-8 text-gray-400"
+              className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-6 lg:gap-8 text-gray-400"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              <div className="text-center">
-                <div className="text-xl sm:text-2xl font-bold text-white">500K+</div>
-                <div className="text-xs sm:text-sm">Total Views</div>
+              <div className="text-center min-w-0">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">500K+</div>
+                <div className="text-xs sm:text-sm whitespace-nowrap">Total Views</div>
               </div>
-              <div className="w-px h-8 sm:h-12 bg-gray-600 hidden sm:block"></div>
-              <div className="text-center">
-                <div className="text-xl sm:text-2xl font-bold text-white">50+</div>
-                <div className="text-xs sm:text-sm">Happy Clients</div>
+              <div className="w-px h-6 sm:h-8 lg:h-12 bg-gray-600 hidden sm:block"></div>
+              <div className="text-center min-w-0">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">50+</div>
+                <div className="text-xs sm:text-sm whitespace-nowrap">Happy Clients</div>
               </div>
-              <div className="w-px h-8 sm:h-12 bg-gray-600 hidden sm:block"></div>
-              <div className="text-center">
-                <div className="text-xl sm:text-2xl font-bold text-white">3+</div>
-                <div className="text-xs sm:text-sm">Years Experience</div>
+              <div className="w-px h-6 sm:h-8 lg:h-12 bg-gray-600 hidden sm:block"></div>
+              <div className="text-center min-w-0">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">3+</div>
+                <div className="text-xs sm:text-sm whitespace-nowrap">Years Experience</div>
               </div>
             </motion.div>
           </motion.div>
@@ -192,7 +192,7 @@ const Hero = () => {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
+          className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer px-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
@@ -208,11 +208,11 @@ const Hero = () => {
           whileTap={{ scale: 0.95 }}
         >
           <div className="flex flex-col items-center gap-2">
-             <span className="text-gray-400 text-sm">Scroll to explore below</span>
-            <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
+             <span className="text-gray-400 text-xs sm:text-sm text-center whitespace-nowrap">Scroll to explore below</span>
+            <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-600 rounded-full flex justify-center">
               <motion.div
-                className="w-1 h-3 bg-primary rounded-full mt-2"
-                animate={{ y: [0, 12, 0] }}
+                className="w-1 h-2 sm:h-3 bg-primary rounded-full mt-1 sm:mt-2"
+                animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               />
             </div>
