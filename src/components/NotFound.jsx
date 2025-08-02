@@ -10,7 +10,7 @@ const NotFound = () => {
         title="404 - Page Not Found | Adarsha Bro"
         description="Sorry, the page you're looking for doesn't exist. Return to Adarsha Bro's homepage to explore digital marketing services and content creation."
         keywords="404 Error, Page Not Found, Adarsha Bro, Digital Marketing, Content Creation"
-        url="https://aadarsa.netlify.app/404"
+        url="https://www.adarshabro.com/404"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       {/* Background Elements */}
