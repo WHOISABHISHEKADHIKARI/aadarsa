@@ -45,19 +45,19 @@ const BrandsSection = () => {
     {
       id: 7,
       name: "Aadinasi Hair Oil",
-      logo: "/logo/Aadinasi Hair oil.jpg",
+      logo: "/logo/Aadinasi-Hair-Oil.jpg",
       description: "Natural hair care and wellness products"
     },
     {
       id: 8,
       name: "Bajaj",
-      logo: "/logo/Bajaj'.jpg",
+      logo: "/logo/Bajaj.jpg",
       description: "Leading automotive and motorcycle brand"
     },
     {
       id: 9,
       name: "Kollywood Super Dance & Fitness",
-      logo: "/logo/Kollywood Super Dance & Fitness Pvt ltd.jpg",
+      logo: "/logo/Kollywood-Dance-Fitness.jpg",
       description: "Dance academy and fitness center"
     }
   ];
@@ -156,7 +156,7 @@ const BrandsSection = () => {
             <div className="text-gray-600 font-medium">Brand Partners</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">500K+</div>
+            <div className="text-3xl font-bold text-primary mb-2">5M+</div>
             <div className="text-gray-600 font-medium">Total Reach</div>
           </div>
           <div className="text-center">

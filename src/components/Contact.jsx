@@ -100,7 +100,7 @@ const Contact = () => {
         </svg>
       ),
       title: "Email",
-      value: "info@adarsha.com",
+      value: "info@adarshabro.com",
       link: "mailto:info@adarsha.com"
     },
     {
