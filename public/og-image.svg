@@ -1,0 +1,77 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="100" r="80" fill="#3b82f6" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="120" fill="#8b5cf6" opacity="0.1"/>
+  <circle cx="600" cy="315" r="200" fill="#3b82f6" opacity="0.05"/>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Main Content -->
+  <g transform="translate(100, 150)">
+    <!-- Main Title -->
+    <text x="0" y="80" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#ffffff">
+      Adarsha Bro
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="140" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="url(#textGradient)">
+      Content Creator &amp; Digital Marketing Expert
+    </text>
+    
+    <!-- Description -->
+    <text x="0" y="190" font-family="Arial, sans-serif" font-size="24" fill="#cbd5e1">
+      Specializing in Food Content &amp; Brand Growth
+    </text>
+    
+    <!-- Stats -->
+    <g transform="translate(0, 250)">
+      <g>
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#3b82f6">5M+</text>
+        <text x="0" y="30" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">Total Views</text>
+      </g>
+      <g transform="translate(150, 0)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#3b82f6">50+</text>
+        <text x="0" y="30" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">Happy Clients</text>
+      </g>
+      <g transform="translate(300, 0)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#3b82f6">3+</text>
+        <text x="0" y="30" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">Years Experience</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Profile Icon/Avatar Placeholder -->
+  <g transform="translate(850, 200)">
+    <circle cx="100" cy="100" r="80" fill="#3b82f6" opacity="0.2"/>
+    <circle cx="100" cy="100" r="60" fill="#ffffff" opacity="0.1"/>
+    <!-- Simple avatar icon -->
+    <circle cx="100" cy="85" r="20" fill="#3b82f6"/>
+    <path d="M 70 130 Q 100 110 130 130 L 130 140 Q 100 120 70 140 Z" fill="#3b82f6"/>
+  </g>
+  
+  <!-- Website URL -->
+  <text x="100" y="580" font-family="Arial, sans-serif" font-size="20" fill="#64748b">
+    aadarsa.netlify.app
+  </text>
+</svg>

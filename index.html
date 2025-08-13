@@ -3,28 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Preload critical images for faster loading -->
+    <!-- DNS Prefetch for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/index.css" as="style" />
+    <link rel="preload" href="/src/assets/IMG_9188.PNG" as="image" />
     
     <!-- SEO Meta Tags -->
-    <title>Adarsha Bro - Content Creator & Digital Marketing Expert</title>
-    <meta name="description" content="Aadrasa Upreti (Adarsha Bro) - Content Creator specializing in Food and Digital Marketing. Watch engaging videos and get expert digital marketing consultation." />
-    <meta name="keywords" content="Adarsha Bro, Aadrasa Upreti, Content Creator, Food Content, Digital Marketing, Nepal, YouTube, Social Media" />
+    <title>Adarsha Bro - Content Creator & Digital Marketing Expert | Aadrasa Upreti</title>
+    <meta name="description" content="Aadrasa Upreti (Adarsha Bro) - Professional Content Creator specializing in Food Content and Digital Marketing. Get expert consultation, watch engaging videos, and grow your brand with proven strategies." />
+    <meta name="keywords" content="Adarsha Bro, Aadrasa Upreti, Content Creator, Food Content, Digital Marketing, Nepal, YouTube, Social Media, Brand Strategy, SEO Expert, Video Production" />
     <meta name="author" content="Aadrasa Upreti" />
+    <meta name="language" content="English" />
+    <meta name="geo.region" content="NP" />
+    <meta name="geo.country" content="Nepal" />
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Adarsha Bro - Content Creator & Digital Marketing Expert" />
-    <meta property="og:description" content="Bringing flavors to life and helping brands grow through creative storytelling and strategic digital presence." />
+    <meta property="og:title" content="Adarsha Bro - Content Creator & Digital Marketing Expert | Aadrasa Upreti" />
+    <meta property="og:description" content="Professional Content Creator specializing in Food Content and Digital Marketing. Expert consultation, engaging videos, and proven brand growth strategies." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://adarsabro.com" />
-    <meta property="og:image" content="https://adarsabro.com/og-image.jpg" />
+    <meta property="og:url" content="https://aadarsa.netlify.app" />
+    <meta property="og:image" content="https://aadarsa.netlify.app/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Adarsha Bro - Content Creator & Digital Marketing Expert" />
+    <meta property="og:site_name" content="Adarsha Bro" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Adarsha Bro - Content Creator & Digital Marketing Expert" />
-    <meta name="twitter:description" content="Bringing flavors to life and helping brands grow through creative storytelling and strategic digital presence." />
-    <meta name="twitter:image" content="https://adarsabro.com/twitter-image.jpg" />
+    <meta name="twitter:description" content="Professional Content Creator specializing in Food Content and Digital Marketing. Expert consultation and proven strategies." />
+    <meta name="twitter:image" content="https://aadarsa.netlify.app/og-image.svg" />
+    <meta name="twitter:image:alt" content="Adarsha Bro - Content Creator & Digital Marketing Expert" />
+    <meta name="twitter:creator" content="@adarshabro" />
+    <meta name="twitter:site" content="@adarshabro" />
     
     <!-- Additional Meta Tags -->
     <meta name="robots" content="index, follow" />
@@ -35,17 +53,59 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
+      "@type": ["Person", "ProfessionalService"],
       "name": "Aadrasa Upreti",
       "alternateName": "Adarsha Bro",
-      "description": "Content Creator & Digital Marketing Expert",
+      "description": "Professional Content Creator & Digital Marketing Expert specializing in Food Content and Brand Strategy",
       "url": "https://aadarsa.netlify.app",
-      "jobTitle": "Digital Marketing Consultant",
-      "knowsAbout": ["Digital Marketing", "Content Creation", "SEO", "Social Media Marketing"],
-      "offers": {
-        "@type": "Service",
-        "name": "Digital Marketing Services",
-        "description": "Comprehensive digital marketing solutions including SEO, content creation, and social media management"
+      "image": "https://aadarsa.netlify.app/og-image.svg",
+      "jobTitle": "Digital Marketing Consultant & Content Creator",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Adarsha Bro Media"
+      },
+      "knowsAbout": [
+        "Digital Marketing", 
+        "Content Creation", 
+        "SEO", 
+        "Social Media Marketing", 
+        "Food Content", 
+        "Video Production", 
+        "Brand Strategy"
+      ],
+      "sameAs": [
+        "https://www.youtube.com/@adarshabro",
+        "https://www.instagram.com/adarshabro",
+        "https://www.facebook.com/adarshabro"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Business Inquiries",
+        "availableLanguage": ["English", "Nepali"]
+      },
+      "offers": [
+        {
+          "@type": "Service",
+          "name": "Digital Marketing Consultation",
+          "description": "Expert digital marketing strategy and implementation",
+          "serviceType": "Digital Marketing"
+        },
+        {
+          "@type": "Service",
+          "name": "Content Creation",
+          "description": "Professional food content and video production",
+          "serviceType": "Content Creation"
+        },
+        {
+          "@type": "Service",
+          "name": "Brand Strategy",
+          "description": "Comprehensive brand development and growth strategies",
+          "serviceType": "Brand Consulting"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Nepal"
       }
     }
     </script>

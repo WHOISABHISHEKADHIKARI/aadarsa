@@ -9,9 +9,29 @@ const About = () => {
         title="About Adarsha Bro - Digital Marketing Expert & Food Content Creator"
         description="Learn about Aadrasa Upreti (Adarsha Bro), a passionate content creator specializing in food content and digital marketing. Discover his journey from kitchen to digital success."
         keywords="About Adarsha Bro, Aadrasa Upreti, Food Content Creator, Digital Marketing Expert, Content Creation, Brand Strategy"
-        url="https://www.adarshabro.com/about"
+        url="https://aadarsa.netlify.app/about"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Aadrasa Upreti",
+            "alternateName": "Adarsha Bro",
+            "description": "Professional Content Creator & Digital Marketing Expert specializing in Food Content and Brand Strategy",
+            "jobTitle": "Digital Marketing Consultant & Content Creator",
+            "knowsAbout": ["Food Content", "Digital Marketing", "Brand Strategy", "Social Media", "Video Production", "Content Writing"],
+            "hasOccupation": {
+              "@type": "Occupation",
+              "name": "Content Creator",
+              "occupationLocation": {
+                "@type": "Country",
+                "name": "Nepal"
+              }
+            }
+          }
+        }}
       />
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white" itemScope itemType="https://schema.org/AboutPage">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -21,9 +41,9 @@ const About = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-dark mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-dark mb-4">
             About <span className="text-primary">Adarsha Bro</span>
-          </h2>
+          </h1>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
@@ -42,11 +62,12 @@ const About = () => {
               <div className="aspect-[4/5] overflow-hidden">
                 <img 
                   src={aboutImage} 
-                  alt="Adarsha Bro - Digital Marketing Expert and Content Creator" 
+                  alt="Adarsha Bro (Aadrasa Upreti) - Professional Digital Marketing Expert and Food Content Creator in his workspace" 
                   className="w-full h-full object-cover"
                   loading="lazy"
                   decoding="async"
                   fetchPriority="high"
+                  itemProp="image"
                   onLoad={(e) => {
                     e.target.style.opacity = '1';
                     e.target.style.transform = 'scale(1)';
@@ -73,9 +94,9 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold text-dark mb-6">
+            <h2 className="text-3xl font-bold text-dark mb-6">
               From Kitchen to <span className="text-primary">Digital Success</span>
-            </h3>
+            </h2>
             
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p className="text-lg">
@@ -121,7 +142,7 @@ const About = () => {
 
             {/* Skills */}
             <div className="pt-6">
-              <h4 className="text-xl font-semibold text-dark mb-4">Expertise</h4>
+              <h3 className="text-xl font-semibold text-dark mb-4">Expertise</h3>
               <div className="flex flex-wrap gap-3">
                 {['Food Content', 'Digital Marketing', 'Brand Strategy', 'Social Media', 'Video Production', 'Content Writing'].map((skill, index) => (
                   <motion.span

@@ -17,7 +17,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" role="banner" aria-label="Hero section">
       {/* Enhanced Background */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-gradient-to-br from-slate-900 via-gray-900 to-black relative">
@@ -75,7 +75,7 @@ const Hero = () => {
             </motion.h1>
             
             {/* Subtitle */}
-            <motion.p
+            <motion.h2
               className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ const Hero = () => {
               <span className="text-white font-semibold">Content Creator</span> & <span className="text-white font-semibold">Digital Marketing Expert</span>
               <br className="hidden sm:block" />
               <span className="block sm:inline text-base sm:text-lg text-gray-400 mt-1 sm:mt-0">Specializing in Food Content & Brand Growth</span>
-            </motion.p>
+            </motion.h2>
 
             {/* Description */}
             <motion.p
@@ -161,8 +161,10 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-2xl"></div>
                 <img 
                   src={profilePhoto} 
-                  alt="Adarsha Bro" 
+                  alt="Adarsha Bro - Professional Content Creator and Digital Marketing Expert specializing in food content and brand growth strategies" 
                   className="relative w-full h-full object-cover rounded-full border-4 border-white/10 shadow-2xl"
+                  loading="eager"
+                  fetchpriority="high"
                 />
                 
                 {/* Floating elements */}

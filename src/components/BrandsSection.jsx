@@ -72,9 +72,28 @@ const BrandsSection = () => {
         title="Brand Collaborations - Adarsha Bro's Partner Brands & Success Stories"
         description="Discover the brands that trust Adarsha Bro for content creation and digital marketing. See successful collaborations and partnership opportunities."
         keywords="Adarsha Bro Brand Partnerships, Brand Collaborations, Digital Marketing Partners, Content Creation Clients, Brand Success Stories"
-        url="https://www.adarshabro.com/brands"
+        url="https://aadarsa.netlify.app/brands"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Brand Collaborations - Adarsha Bro",
+          "description": "Brands that trust Adarsha Bro for content creation and digital marketing",
+          "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": brands.length,
+            "itemListElement": brands.map((brand, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Organization",
+                "name": brand.name,
+                "description": brand.description
+              }
+            }))
+          }
+        }}
       />
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white" itemScope itemType="https://schema.org/CollectionPage">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -84,9 +103,9 @@ const BrandsSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Brands I <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Work With</span>
-          </h2>
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Trusted by leading brands across various industries to create compelling content and drive meaningful engagement.
           </p>
@@ -109,9 +128,11 @@ const BrandsSection = () => {
                 {!imageErrors[brand.id] ? (
                   <img 
                     src={brand.logo} 
-                    alt={brand.name}
+                    alt={`${brand.name} logo - Brand partner of Adarsha Bro for content creation and digital marketing`}
                     className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
                     onError={() => handleImageError(brand.id)}
+                    loading="lazy"
+                    itemProp="logo"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg">
@@ -128,12 +149,12 @@ const BrandsSection = () => {
               </div>
               
               {/* Brand Name */}
-              <h3 className="font-semibold text-gray-900 text-center mb-2 group-hover:text-primary transition-colors duration-300">
+              <h2 className="font-semibold text-gray-900 text-center mb-2 group-hover:text-primary transition-colors duration-300" itemProp="name">
                 {brand.name}
-              </h3>
+              </h2>
               
               {/* Brand Description */}
-              <p className="text-xs text-gray-600 text-center leading-relaxed">
+              <p className="text-xs text-gray-600 text-center leading-relaxed" itemProp="description">
                 {brand.description}
               </p>
               
