@@ -152,7 +152,7 @@ const BrandsSection = () => {
           viewport={{ once: true }}
         >
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">{brands.length}+</div>
+            <div className="text-3xl font-bold text-primary mb-2">50+</div>
             <div className="text-gray-600 font-medium">Brand Partners</div>
           </div>
           <div className="text-center">
@@ -169,33 +169,7 @@ const BrandsSection = () => {
           </div>
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Join These Success Stories?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Let's create compelling content that drives real results for your brand.
-            </p>
-            <button 
-              onClick={() => {
-                const message = `Hi! I'm interested in collaborating with you for my brand. I saw your work with other brands and would like to discuss possibilities.`;
-                const whatsappUrl = `https://wa.me/9779763219914?text=${encodeURIComponent(message)}`;
-                window.open(whatsappUrl, '_blank');
-              }}
-              className="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Start Your Brand Journey
-            </button>
-          </div>
-        </motion.div>
+   
       </div>
     </section>
     </>
