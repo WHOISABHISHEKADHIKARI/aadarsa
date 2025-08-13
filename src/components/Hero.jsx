@@ -132,7 +132,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.7 }}
             >
               <div className="text-center flex-shrink-0 px-2">
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight">500K+</div>
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight">5M+</div>
                 <div className="text-xs sm:text-sm whitespace-nowrap mt-1">Total Views</div>
               </div>
               <div className="w-px h-8 sm:h-10 lg:h-12 bg-gray-600 hidden sm:block"></div>
