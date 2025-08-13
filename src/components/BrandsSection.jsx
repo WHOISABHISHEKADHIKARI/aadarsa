@@ -41,6 +41,24 @@ const BrandsSection = () => {
       name: "SFM Fresh Masala",
       logo: "/logo/SFM Fresh Masala.png",
       description: "Premium spices and masala products"
+    },
+    {
+      id: 7,
+      name: "Aadinasi Hair Oil",
+      logo: "/logo/Aadinasi Hair oil.jpg",
+      description: "Natural hair care and wellness products"
+    },
+    {
+      id: 8,
+      name: "Bajaj",
+      logo: "/logo/Bajaj'.jpg",
+      description: "Leading automotive and motorcycle brand"
+    },
+    {
+      id: 9,
+      name: "Kollywood Super Dance & Fitness",
+      logo: "/logo/Kollywood Super Dance & Fitness Pvt ltd.jpg",
+      description: "Dance academy and fitness center"
     }
   ];
 
