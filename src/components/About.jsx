@@ -105,7 +105,7 @@ const About = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="text-2xl sm:text-3xl font-bold text-primary mb-1 sm:mb-2">500K+</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary mb-1 sm:mb-2">5M+</div>
                 <div className="text-sm sm:text-base text-gray-600">Total Views</div>
               </motion.div>
               
