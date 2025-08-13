@@ -60,6 +60,50 @@ const Brands = () => {
       results: "250% increase in foot traffic",
       duration: "10 months",
       services: ["Food Photography", "Social Media Management", "Content Strategy"]
+    },
+    {
+      id: 6,
+      name: "Aadibasi Hair Oil",
+      category: "beauty",
+      logo: "/logo/Aadinasi Hair oil.jpg",
+      description: "Natural hair care and wellness products",
+      collaboration: "Product photography and beauty content creation",
+      results: "180% increase in online sales",
+      duration: "5 months",
+      services: ["Product Photography", "Beauty Content", "Social Media Marketing"]
+    },
+    {
+      id: 7,
+      name: "Bajaj",
+      category: "automotive",
+      logo: "/logo/Bajaj'.jpg",
+      description: "Leading automotive and motorcycle brand",
+      collaboration: "Vehicle showcase and promotional campaigns",
+      results: "220% boost in brand engagement",
+      duration: "9 months",
+      services: ["Automotive Photography", "Video Production", "Campaign Strategy"]
+    },
+    {
+      id: 8,
+      name: "Kollywood Super Dance & Fitness",
+      category: "fitness",
+      logo: "/logo/Kollywood Super Dance & Fitness Pvt ltd.jpg",
+      description: "Dance academy and fitness center",
+      collaboration: "Event coverage and fitness content creation",
+      results: "300% growth in student enrollment",
+      duration: "7 months",
+      services: ["Event Photography", "Fitness Videos", "Social Media Content"]
+    },
+    {
+      id: 9,
+      name: "SFM Fresh Masala",
+      category: "food",
+      logo: "/logo/SFM Fresh Masala.png",
+      description: "Premium spices and masala products",
+      collaboration: "Product photography and culinary content",
+      results: "190% increase in market reach",
+      duration: "6 months",
+      services: ["Product Photography", "Culinary Content", "Brand Strategy"]
     }
   ];
 
@@ -67,13 +111,20 @@ const Brands = () => {
     { id: 'all', name: 'All Brands', count: brands.length },
     { id: 'food', name: 'Food & Beverage', count: brands.filter(b => b.category === 'food' || b.category === 'restaurant').length },
     { id: 'hospitality', name: 'Hospitality', count: brands.filter(b => b.category === 'hospitality').length },
-    { id: 'travel', name: 'Travel', count: brands.filter(b => b.category === 'travel').length }
+    { id: 'travel', name: 'Travel', count: brands.filter(b => b.category === 'travel').length },
+    { id: 'beauty', name: 'Beauty & Wellness', count: brands.filter(b => b.category === 'beauty').length },
+    { id: 'automotive', name: 'Automotive', count: brands.filter(b => b.category === 'automotive').length },
+    { id: 'fitness', name: 'Fitness & Dance', count: brands.filter(b => b.category === 'fitness').length }
   ];
 
   const filteredBrands = activeCategory === 'all' 
     ? brands 
-    : brands.filter(brand => brand.category === activeCategory || 
-        (activeCategory === 'food' && (brand.category === 'food' || brand.category === 'restaurant')));
+    : brands.filter(brand => {
+        if (activeCategory === 'food') {
+          return brand.category === 'food' || brand.category === 'restaurant';
+        }
+        return brand.category === activeCategory;
+      });
 
   const BrandCard = ({ brand, index }) => {
     const [imageError, setImageError] = useState(false);
